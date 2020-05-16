@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <!-- REACT LIBRARY -->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+
+    <!-- REACT DOM LIBRARY -->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>BoilerPlate Code</title>
+</head>
+
+<body>
+
+    <!--DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app">React has'nt been rendered yet.</div>
+
+
+    <script type="text/babel">
+
+//       class GuessAge extends React.Component{
+//           
+//           constructor(props)
+//          {
+//              super(props);
+//              this.state = {
+//                  age:"Guess my Age"
+//              };
+//             
+//              this.onButtonClick = this.onButtonClick.bind(this)
+//          }
+//           
+////           this.onButtonClick = this.onButtonClick.bind(this)
+//           onButtonClick()
+//           {
+//               this.setState({
+//                   age:'21'
+//               })
+//           }
+//           
+//           render(){
+//               
+//               return(
+//               <div>
+//               <h1>Guessing Game</h1>
+//               <h1>{this.state.age}</h1>
+//               <button onClick = {this.onButtonClick} >Reveal my Age</button>          
+//                </div>
+//               )
+//               
+//           }
+//           
+//           
+//       }
+
+
+       class GuessAge extends React.Component{
+           
+           constructor(props)
+          {
+              super(props);
+              this.state = {
+                  age:"Guess my Age"
+              };
+             
+              //this.onButtonClick = this.onButtonClick.bind(this)
+          }
+           
+
+           onButtonClick()
+           {
+               this.setState({
+                   age:'21'
+               })
+           }
+           
+           render(){
+               
+               return(
+               <div>
+               <h1>Guessing Game</h1>
+               <h1>{this.state.age}</h1>
+              
+               
+               
+               
+               <button onClick = { () => this.onButtonClick() }>Reveal my Age</button>                   
+                </div>
+               )
+               
+           }
+           
+           
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // RENDER REACT TO THE DOM - WILL ACCEPT TWO ARGUMENTS(REACT WHAT< REACT WHERE)
+    ReactDOM.render(
+     //REACT WHAT - JSX
+        <GuessAge />,
+    //REACT WHERE - DIV WITH ID OF 'APP'
+      document.getElementById("app")
+    );
+    
+    
+    </script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Inside of the Constructor method, we will add the 'props' object
+
+  Constructor method is a special function for ES6 classes in JavaScript
+   Whenever an object is created via class in JavaScript, JavaScript invokes 
+   the constructor function.
+   
+   React will invoke the constructor with the props and context of the 
+   component
+   
+   SUPER Keyword--- It invokes the constructor function defined by React.Component which
+   executes some neccessary set of code for our component. It is important to call super()
+   whenever we define a constructor function
+   
+   If you would like to access 'this' or set a property inside the constructor, you will need to
+   call super()
+    
+      
+          
+          
+    LINE NO 93 ---- arrow function preserver 'this' context when they are called      
+          
+          
+          
+          
+          -->
+          
+
+
+
+
+
+
+
+
+
+

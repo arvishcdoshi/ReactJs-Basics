@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+<!--    <link rel="stylesheet" href="style.css">-->
+    <!-- REACT LIBRARY -->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+
+    <!-- REACT DOM LIBRARY -->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>Let's React</title>
+</head>
+
+<body>
+
+    <!--DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app">React has'nt been rendered yet.</div>
+
+
+    <script type="text/babel">
+
+   
+    
+    var Red = function(){
+        
+        var redStyle = {
+            height:50,
+            width:150,
+            backgroundColor:"red"
+        }
+        return(<h1 style={redStyle}>Red</h1>);
+    }
+    
+    var Blue = function(){
+        return(<h1 className="blue">Blue</h1>);
+    }
+    
+    var Green = function(){
+        return(<h1 className="green">Green</h1>);
+    }
+    
+    var Yellow = function(){
+        return(<h1 className="yellow">Yellow</h1>);
+    }
+    
+    var Pink = function(){
+        return(<h1 className="pink">Pink</h1>);
+    }
+    
+    var Indigo = function(){
+        return(<h1 className="indigo">Indigo</h1>);
+    }
+    
+    var Brown = function(){
+        return(<h1 className="Brown">Brown</h1>);
+    }
+
+        // RENDER REACT TO THE DOM - WILL ACCEPT TWO ARGUMENTS(REACT WHAT< REACT WHERE)
+    ReactDOM.render(
+     //REACT WHAT - JSX
+        <div>
+        <Red/>
+        <Blue/>
+        <Green/>
+        <Yellow/>
+        <Pink/>
+        <Indigo/>
+        </div>,
+    //REACT WHERE - DIV WITH ID OF 'APP'
+      document.getElementById("app")
+    );
+    
+    
+    </script>
+
+
+
+
+</body>
+
+</html>

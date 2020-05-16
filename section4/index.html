@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+<!--    <link rel="stylesheet" href="style.css">-->
+    <!-- REACT LIBRARY -->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+
+    <!-- REACT DOM LIBRARY -->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>Let's React</title>
+</head>
+
+<body>
+
+    <!--DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app">React has'nt been rendered yet.</div>
+
+
+    <script type="text/babel">
+
+    var ColorSpectrum = function(){
+        
+        return(
+          <div>
+            <Red/>
+            <Blue/>
+            <Green/>
+            <Yellow/>
+            <Pink/>
+            <Indigo/>                 
+          </div>
+        
+        
+        );
+        
+        
+        
+    }
+   
+    
+    var Red = function(){
+        
+        var redStyle = {
+            height:50,
+            width:150,
+            backgroundColor:"red"
+        }
+        return(<h1 style={redStyle}>Red</h1>);
+    }
+    
+    var Blue = function(){
+        
+         var blueStyle = {
+            height:50,
+            width:150,
+            backgroundColor:"blue"
+        }
+        
+        
+        
+        return(<h1 style={blueStyle}>Blue</h1>);
+    }
+    
+    var Green = function(){
+        
+         var greenStyle = {
+            height:50,
+            width:150,
+            backgroundColor:"green"
+        }
+        
+        
+        
+        return(<h1 style={greenStyle}>Green</h1>);
+    }
+    
+    var Yellow = function(){
+        
+         var yellowStyle = {
+            height:50,
+            width:150,
+            backgroundColor:"yellow"
+        }
+        
+        
+        
+        return(<h1 style={yellowStyle}>Yellow</h1>);
+    }
+    
+    var Pink = function(){
+        
+         var pinkStyle = {
+            height:50,
+            width:150,
+            backgroundColor:"pink"
+        }
+    
+        
+        return(<h1 style={pinkStyle}>Pink</h1>);
+    }
+    
+    var Indigo = function(){
+        
+         var indigoStyle = {
+            height:50,
+            width:150,
+            backgroundColor:"indigo"
+        }
+        
+        return(<h1 style={indigoStyle}>Indigo</h1>);
+    }
+    
+    
+
+        // RENDER REACT TO THE DOM - WILL ACCEPT TWO ARGUMENTS(REACT WHAT< REACT WHERE)
+    ReactDOM.render(
+     //REACT WHAT - JSX
+        <ColorSpectrum/>,
+    //REACT WHERE - DIV WITH ID OF 'APP'
+      document.getElementById("app")
+    );
+    
+    
+    </script>
+
+
+
+
+</body>
+
+</html>

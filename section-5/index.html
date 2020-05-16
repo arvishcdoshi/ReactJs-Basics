@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <!-- REACT LIBRARY -->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+
+    <!-- REACT DOM LIBRARY -->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>Stateless functional Component Props</title>
+</head>
+
+<body>
+
+    <!--DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app">React has'nt been rendered yet.</div>
+
+
+    <script type="text/babel">
+
+        var Person = function(props){
+        return (
+        
+            <h1>Hi {props.name}</h1>
+        );
+    }
+
+// name='Arvish' written in first arg. of reactDom.render is equivalent to 
+// var props = {
+//        name:'Arvish'
+//      }        
+
+// RENDER REACT TO THE DOM - WILL ACCEPT TWO ARGUMENTS(REACT WHAT< REACT WHERE)
+    ReactDOM.render(
+     //REACT WHAT - JSX
+     <div>
+        <Person name="Arvish"/>
+        <Person name="John"/>
+        <Person name="David"/>
+        <Person name="Jacob"/>
+        
+    </div>,    
+    //REACT WHERE - DIV WITH ID OF 'APP'
+      document.getElementById("app")
+    );
+    
+    
+    </script>
+
+
+
+
+</body>
+
+</html>
